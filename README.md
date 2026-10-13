@@ -101,8 +101,10 @@ node tools/make-icon.mjs              # only when the icon changes (needs rsvg-c
 `build-airplay.py` pins Shairport Sync 5.5.1
 (`01078ad15d4da06dffba0c5f15ffeaf9146a2a2a`) and checksum-pinned build
 dependencies (libconfig, popt, OpenSSL, a minimal FFmpeg ALAC decoder), linked
-statically. Its licenses are bundled with the helper; keep the corresponding
-sources available when you redistribute a build.
+statically. Its licenses are bundled with the helper. Every release also
+ships `Helix-<version>-airplay-sources.tar` with the exact sources and patch of
+the helper (FFmpeg and libconfig are LGPL 2.1); do the same when you
+redistribute your own build.
 
 ## Checks
 
