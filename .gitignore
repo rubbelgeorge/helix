@@ -1,0 +1,10 @@
+.DS_Store
+build/
+DerivedData/
+*.xcuserstate
+__pycache__/
+
+Remote/node_modules/
+Remote/dist/
+xcuserdata/
+ 

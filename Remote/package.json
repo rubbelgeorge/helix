@@ -1,0 +1,1 @@
+{"name":"helix-remote","private":true,"version":"0.4.0","type":"module","scripts":{"build":"vite build"},"dependencies":{"react":"^19.0.0","react-dom":"^19.0.0","@phosphor-icons/react":"^2.1.0","@fontsource/geist":"^5.2.0"},"devDependencies":{"vite":"^7.0.0","tailwindcss":"^4.0.0","@tailwindcss/vite":"^4.0.0"},"license":"MIT"}
