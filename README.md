@@ -5,8 +5,8 @@
 <h1 align="center">Helix</h1>
 
 <p align="center">
-  A native macOS player for your own Apple Music subscription, with lossless
-  (ALAC) playback, a Music-app-style library and catalog browser, a phone
+  A native macOS player for your own Apple Music subscription, with Hires-lossless
+  (ALAC up to 192 kHz/24 Bit) playback, a Music-app-style library and catalog browser, a phone
   remote and an AirPlay receiver. Runs on Intel and Apple Silicon, macOS 15 or later.
 </p>
 
