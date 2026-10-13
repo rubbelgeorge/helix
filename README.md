@@ -1,16 +1,57 @@
-# Helix
+<p align="center">
+  <img src="docs/icon.png" width="200" alt="Helix app icon">
+</p>
 
-A native macOS player for your own Apple Music subscription, with lossless
-(ALAC) playback, a Music-app-style library and catalog browser, a phone remote
-and an AirPlay receiver. Runs on Intel and Apple Silicon, macOS 15 or later.
+<h1 align="center">Helix</h1>
 
-[![ko-fi](https://ko-fi.com/img/githubbutton_sm.svg)](https://ko-fi.com/rubbishgee)
+<p align="center">
+  A native macOS player for your own Apple Music subscription, with lossless
+  (ALAC) playback, a Music-app-style library and catalog browser, a phone
+  remote and an AirPlay receiver. Runs on Intel and Apple Silicon, macOS 15 or later.
+</p>
+
+<p align="center">
+  <a href="https://github.com/rubbelgeorge/helix/releases/latest"><b>Download</b></a> ·
+  <a href="#requirements-bring-your-own-wrapper">Setup</a> ·
+  <a href="#screenshots">Screenshots</a>
+</p>
+
+<p align="center">
+  <a href="https://ko-fi.com/rubbishgee"><img src="https://ko-fi.com/img/githubbutton_sm.svg" alt="Support me on Ko-fi"></a>
+</p>
+
+<p align="center">
+  <img src="docs/screenshots/now-playing-album.jpg" alt="Full-screen player with the album's track list">
+</p>
 
 > **Not affiliated with Apple.** Apple Music is a trademark of Apple Inc.
 > Helix contains no Apple code, no keys and no wrapper. It only plays
 > audio for a subscription you hold; it cannot download, save or export
 > titles. Use it in accordance with the terms of your Apple Music subscription
 > and the law of your country.
+
+## Screenshots
+
+<p align="center">
+  <img src="docs/screenshots/album.png" alt="Album page with track list and player bar">
+  <br><em>Album pages with lossless playback, like the Music app</em>
+</p>
+
+<table>
+  <tr>
+    <td width="50%"><img src="docs/screenshots/now-playing.jpg" alt="Full-screen player, cover on top"></td>
+    <td width="50%"><img src="docs/screenshots/now-playing-side.jpg" alt="Full-screen player, cover on the left"></td>
+  </tr>
+  <tr>
+    <td align="center"><em>Full-screen player</em></td>
+    <td align="center"><em>Alternative layout with the cover on the left</em></td>
+  </tr>
+</table>
+
+<p align="center">
+  <img src="docs/screenshots/new.jpg" alt="The New page with Apple's editorial picks">
+  <br><em>Apple's editorial “New” page</em>
+</p>
 
 ## Requirements: bring your own wrapper
 

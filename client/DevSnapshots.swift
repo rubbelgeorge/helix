@@ -7,6 +7,12 @@ import AppKit
 enum DevSnapshots {
     static func run(_ app: AppModel) {
         guard let directory = ProcessInfo.processInfo.environment["HELIX_SNAPSHOTS"] else { return }
+        // HELIX_ALBUM picks the catalog album for the album steps.
+        let albumID = ProcessInfo.processInfo.environment["HELIX_ALBUM"].flatMap { $0.allSatisfy(\.isNumber) && !$0.isEmpty ? $0 : nil } ?? "6779714931"
+        let environment = ProcessInfo.processInfo.environment
+        let album = ["id": albumID, "type": "albums"] as [String: Any]
+        let attributes = ["name": environment["HELIX_ALBUM_NAME"] ?? "Leben in einer Katze", "artistName": environment["HELIX_ALBUM_ARTIST"] ?? "Tränen"]
+        let albumJSON = String(decoding: try! JSONSerialization.data(withJSONObject: album.merging(["attributes": attributes]) { $1 }), as: UTF8.self)
         let steps: [(String, () -> Void)] = [
             ("home", { app.category = .home }),
             ("new", { app.category = .new }),
@@ -20,11 +26,11 @@ enum DevSnapshots {
             ("search", { app.searchText = "love" }),
             ("link", { app.searchText = ""; app.showingQueue = false; app.showingLinkSheet = true }),
             ("prerelease-album", {
-                let json = #"{"id":"6779714931","type":"albums","attributes":{"name":"Leben in einer Katze","artistName":"Tränen"}}"#
+                let json = albumJSON
                 if let item = try? JSONDecoder().decode(LibraryItem.self, from: Data(json.utf8)) { app.category = .new; app.open(item) }
             }),
             ("album-play", {
-                let json = #"{"id":"6779714931","type":"albums","attributes":{"name":"Leben in einer Katze","artistName":"Tränen"}}"#
+                let json = albumJSON
                 if let item = try? JSONDecoder().decode(LibraryItem.self, from: Data(json.utf8)) { app.playCollection(item) }
             }),
             ("nowplaying-album", { NotificationCenter.default.post(name: .init("AMOpenNowPlaying"), object: nil) }),
